@@ -70,7 +70,8 @@ toggle_lazydocker_window() {
     else
       tmux new-window -c "$current_path" -n "$lazydocker_window_name"
       tmux select-window -t "$lazydocker_window_name"
-      tmux send-keys -t "$lazydocker_window_name" "~/.stubbe/bin/tsld" C-m
+      tmux command-prompt -p "Authorize: " "send-keys -t \"$lazydocker_window_name\" \"echo %1 | sudo -S ~/.stubbe/bin/tsld\" C-m"
+      # tmux send-keys -t "$lazydocker_window_name" "~/.stubbe/bin/tsld" C-m
     fi
   else
     exit 0

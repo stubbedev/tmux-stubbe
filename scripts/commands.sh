@@ -47,7 +47,7 @@ toggle_htop_window() {
   else
     tmux new-window -c "$current_path" -n "$htop_window_name"
     tmux select-window -t "$htop_window_name"
-    tmux send-keys -t "$htop_window_name" "source $CURRENT_CONTENT_DIR && toggle_htop" C-m
+    tmux send-keys -t "$htop_window_name" "source $CURRENT_CONTENT_DIR/utils.sh && toggle_htop" C-m
   fi
 }
 
@@ -73,7 +73,7 @@ toggle_lazydocker_window() {
       tmux new-window -c "$current_path" -n "$lazydocker_window_name"
       tmux select-window -t "$lazydocker_window_name"
       # tmux command-prompt -p "Authorize: " "send-keys -t \"$lazydocker_window_name\" \"echo %1 | sudo -S $lazydocker_path\" C-m"
-      tmux send-keys -t "$lazydocker_window_name" "source $CURRENT_CONTENT_DIR && toggle_lazydocker" C-m
+      tmux send-keys -t "$lazydocker_window_name" "source $CURRENT_CONTENT_DIR/utils.sh && toggle_lazydocker" C-m
     fi
   else
     exit 0

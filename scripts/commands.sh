@@ -20,7 +20,7 @@ toggle_lazygit_window() {
     else
       tmux new-window -c "$current_path" -n "$lazygit_window_name"
       tmux select-window -t "$lazygit_window_name"
-      tmux send-keys -t "$lazygit_window_name" "~/.stubbe/bin/tslg" C-m
+      tmux send-keys -t "$lazygit_window_name" "toggle_lazygit" C-m
     fi
   else
     exit 0
@@ -46,7 +46,7 @@ toggle_htop_window() {
   else
     tmux new-window -c "$current_path" -n "$htop_window_name"
     tmux select-window -t "$htop_window_name"
-    tmux send-keys -t "$htop_window_name" "~/.stubbe/bin/htop_wrapper" C-m
+    tmux send-keys -t "$htop_window_name" "toggle_htop" C-m
   fi
 }
 
@@ -72,7 +72,7 @@ toggle_lazydocker_window() {
       tmux new-window -c "$current_path" -n "$lazydocker_window_name"
       tmux select-window -t "$lazydocker_window_name"
       # tmux command-prompt -p "Authorize: " "send-keys -t \"$lazydocker_window_name\" \"echo %1 | sudo -S $lazydocker_path\" C-m"
-      tmux send-keys -t "$lazydocker_window_name" "~/.stubbe/bin/tsld" C-m
+      tmux send-keys -t "$lazydocker_window_name" "toggle_lazydocker" C-m
     fi
   else
     exit 0

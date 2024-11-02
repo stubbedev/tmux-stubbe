@@ -52,7 +52,7 @@ function set_tmux_theme {
 	expanded_icon=' 󰊓 '
 
 	tmux set-option -g status-position "${stb_status}"
-	tmux set-option -g status-style bg=${tmux_bg},fg=${tmux_fg}
+	tmux set-option -g status-style bg=default,fg=default
 	tmux set-option -g status-justify "${justify}"
 	tmux set-option -g status-left "${stb_status_left}"
 	tmux set-option -g status-right "${stb_status_right}"

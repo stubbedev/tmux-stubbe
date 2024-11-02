@@ -59,6 +59,10 @@ function set_tmux_theme {
   tmux set-option -g mode-style bg=${tmux_green},fg=${tmux_bg}
   tmux set-option -g pane-active-border-style bg=${tmux_bg},fg=${tmux_green}
   tmux set-option -g pane-border-style bg=${tmux_bg},fg=${tmux_bg}
+  tmux set-option -g pane-base-index 1
+  tmux set-option -g base-index 1
+  tmux set-option -g renumber-windows on
+  tmux set-option -g set-clipboard on
 }
 
 set_tmux_theme

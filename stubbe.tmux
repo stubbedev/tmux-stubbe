@@ -58,6 +58,7 @@ function set_tmux_theme {
 	tmux set-option -g window-status-current-format "#[bg=${tmux_green},fg=${tmux_bg}] ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
   tmux set-option -g mode-style bg=${tmux_green},fg=${tmux_bg}
   tmux set-option -g pane-active-border-style bg=${tmux_bg},fg=${tmux_green}
+  tmux set-option -g pane-border-style bg=${tmux_bg},fg=${tmux_bg}
 }
 
 set_tmux_theme

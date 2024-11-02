@@ -2,7 +2,7 @@
 
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-$CURRENT_DIR/scripts/lazy.sh
+"$CURRENT_DIR"/scripts/lazy.sh
 
 # Theme
 function set_tmux_theme {
@@ -14,7 +14,6 @@ function set_tmux_theme {
   # Colors
   local tmux_rosewater="#f5e0dc"
   local tmux_flamingo="#f2cdcd"
-  local tmux_rosewater="#f5e0dc"
   local tmux_pink="#f5c2e7"
   local tmux_mauve="#cba6f7"
   local tmux_red="#f38ba8"
@@ -40,16 +39,15 @@ function set_tmux_theme {
   local tmux_mantle="#181825"
   local tmux_crust="#11111b"
 
-	bg="#a6da95"
-	stb_status="top"
-	justify="left"
-	indicator=" [t] "
-	indicator_active=" [p] "
-	window_status_format=' #I:#W '
-	stb_status_right="#S"
-	stb_status_left="#[bg=${tmux_bg},fg=${tmux_fg},bold]#{?client_prefix,,${indicator}}#[bg=${tmux_green},fg=${tmux_bg},bold]#{?client_prefix,${indicator_active},}#[bg=${tmux_bg},fg=${tmux_bg},bold]"
+	local stb_status="top"
+	local justify="left"
+	local indicator=" [t] "
+	local indicator_active=" [p] "
+	local window_status_format=' #I:#W '
+	local stb_status_right="#S"
+	local stb_status_left="#[bg=${tmux_bg},fg=${tmux_fg},bold]#{?client_prefix,,${indicator}}#[bg=${tmux_green},fg=${tmux_bg},bold]#{?client_prefix,${indicator_active},}#[bg=${tmux_bg},fg=${tmux_bg},bold]"
 
-	expanded_icon=' 󰊓 '
+	local expanded_icon=' 󰊓 '
 
 	tmux set-option -g status-position "${stb_status}"
 	tmux set-option -g status-style bg=default,fg=default

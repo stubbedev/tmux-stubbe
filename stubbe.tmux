@@ -47,7 +47,7 @@ function set_tmux_theme {
 	indicator_active=" [p] "
 	window_status_format=' #I:#W '
 	stb_status_right="#S"
-	stb_status_left="#[bg=${tmux_fg},fg=${tmux_bg},bold]#{?client_prefix,,${indicator}}#[bg=${tmux_green},fg=${tmux_bg},bold]#{?client_prefix,${indicator_active},}#[bg=${tmux_fg},fg=${tmux_bg},bold]"
+	stb_status_left="#[bg=${tmux_bg},fg=${tmux_bg},bold]#{?client_prefix,,${indicator}}#[bg=${tmux_green},fg=${tmux_bg},bold]#{?client_prefix,${indicator_active},}#[bg=${tmux_fg},fg=${tmux_bg},bold]"
 
 	expanded_icon=' 󰊓 '
 

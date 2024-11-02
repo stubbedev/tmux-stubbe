@@ -57,7 +57,7 @@ function set_tmux_theme {
 	tmux set-option -g status-left "${stb_status_left}"
 	tmux set-option -g status-right "${stb_status_right}"
 	tmux set-option -g window-status-format "${window_status_format}"
-	tmux set-option -g window-status-current-format "#[bg=${tmux_green},fg=#000000] ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
+	tmux set-option -g window-status-current-format "#[bg=${tmux_green},fg=${tmux_bg}] ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
   tmux set-option -g status-style fg=black,bg=cyan
   tmux set-option -g pane-active-border-style bg=default,fg=cyan
   tmux set-option -g pane-border-style fg=blue

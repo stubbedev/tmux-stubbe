@@ -58,7 +58,7 @@ fi
 toggle_lazydocker_window() {
   if [[ -d .git ]] || git rev-parse --git-dir > /dev/null 2>&1; then
     local lazydocker_window_name="lazydocker"
-    local lazydocker_path=$(which lazydocker)
+    # local lazydocker_path=$(which lazydocker)
     local current_window=$(get_current_window)
     local current_path=$(tmux display-message -p -F "#{pane_current_path}")
 

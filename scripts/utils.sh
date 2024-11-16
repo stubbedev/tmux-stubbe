@@ -48,9 +48,9 @@ function toggle_lazygit {
 function toggle_lazydocker {
 	if command -v lazydocker &>/dev/null; then
 		if [[ -z "$TMUX" ]]; then
-			sudo $(which lazydocker)
+			lazydocker
 		else
-			LAZYDOCKER_ALIVE=$(sudo $(which lazydocker))
+			LAZYDOCKER_ALIVE=$(lazydocker)
 			local LAZYDOCKER_ALIVE
 			if [[ -z "${LAZYDOCKER_ALIVE}" ]]; then
 				tmux kill-pane || exit 0

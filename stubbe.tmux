@@ -45,7 +45,7 @@ function set_tmux_theme {
 	local indicator_active=" [p] "
 	local window_status_format=' #I:#W '
 	local stb_status_right="#S"
-	local stb_status_left="#[bg=default,fg=${tmux_fg},bold]#{?client_prefix,,${indicator}}#[bg=${tmux_green},fg=${tmux_bg},bold]#{?client_prefix,${indicator_active},}#[bg=${tmux_bg},fg=${tmux_bg},bold]"
+	local stb_status_left="#[bg=default,fg=${tmux_fg},bold]#{?client_prefix,,${indicator}}#[bg=${tmux_mauve},fg=${tmux_bg},bold]#{?client_prefix,${indicator_active},}#[bg=${tmux_bg},fg=${tmux_bg},bold]"
 
 	local expanded_icon=' 󰊓 '
 
@@ -55,9 +55,9 @@ function set_tmux_theme {
 	tmux set-option -g status-left "${stb_status_left}"
 	tmux set-option -g status-right "${stb_status_right}"
 	tmux set-option -g window-status-format "${window_status_format}"
-	tmux set-option -g window-status-current-format "#[bg=${tmux_green},fg=${tmux_bg}] ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
-	tmux set-option -g mode-style bg=${tmux_green},fg=${tmux_bg}
-	tmux set-option -g pane-active-border-style bg=${tmux_bg},fg=${tmux_green}
+	tmux set-option -g window-status-current-format "#[bg=${tmux_mauve},fg=${tmux_bg}] ${window_status_format}#{?window_zoomed_flag,${expanded_icon}, }"
+	tmux set-option -g mode-style bg=${tmux_mauve},fg=${tmux_bg}
+	tmux set-option -g pane-active-border-style bg=${tmux_lavender},fg=${tmux_mauve}
 	tmux set-option -g pane-border-style bg=${tmux_bg},fg=${tmux_bg}
 	tmux set-option -g pane-base-index 1
 	tmux set-option -g base-index 1

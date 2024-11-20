@@ -61,9 +61,9 @@ function set_tmux_theme {
 	tmux set-option -g pane-border-style bg=${tmux_bg},fg=${tmux_lavender}
 	tmux set-option -g message-style bg=${tmux_bg},fg=${tmux_lavender}
 	tmux set-option -g message-command-style bg=${tmux_bg},fg=${tmux_lavender}
-	tmux set-option -g copy-mode-match-style bg=${tmux_bg},fg=${tmux_lavender}
+	tmux set-option -g copy-mode-match-style bg=${tmux_lavender},fg=${tmux_bg}
 	tmux set-option -g copy-mode-mark-style bg=${tmux_bg},fg=${tmux_lavender}
-	tmux set-option -g copy-mode-current-match-style bg=${tmux_red},fg=${tmux_lavender}
+	tmux set-option -g copy-mode-current-match-style bg=${tmux_red},fg=${tmux_bg}
 	tmux set-option -g pane-base-index 1
 	tmux set-option -g base-index 1
 	tmux set-option -g renumber-windows on

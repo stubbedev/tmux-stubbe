@@ -32,8 +32,8 @@ if [[ "$1" == "toggle_lazygit_window" ]]; then
 	toggle_lazygit_window
 fi
 
-toggle_htop_window() {
-	local htop_window_name="htop"
+toggle_sysmon_window() {
+	local htop_window_name="sysmon"
 	local current_window=$(get_current_window)
 	local current_path=$(tmux display-message -p -F "#{pane_current_path}")
 
@@ -52,7 +52,7 @@ toggle_htop_window() {
 }
 
 if [[ "$1" == "toggle_htop_window" ]]; then
-	toggle_htop_window
+	toggle_sysmon_window
 fi
 
 toggle_lazydocker_window() {

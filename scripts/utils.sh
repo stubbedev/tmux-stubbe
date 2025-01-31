@@ -62,7 +62,7 @@ function toggle_lazydocker {
   fi
 }
 
-function toggle_htop {
+function toggle_sysmon {
   if command -v btop &>/dev/null; then
     if [[ -z "$TMUX" ]]; then
       btop

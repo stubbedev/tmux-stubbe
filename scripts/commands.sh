@@ -47,11 +47,11 @@ toggle_sysmon_window() {
 	else
 		tmux new-window -c "$current_path" -n "$htop_window_name"
 		tmux select-window -t "$htop_window_name"
-		tmux send-keys -t "$htop_window_name" "source $CURRENT_CONTENT_DIR/utils.sh && toggle_htop" C-m
+		tmux send-keys -t "$htop_window_name" "source $CURRENT_CONTENT_DIR/utils.sh && toggle_sysmon" C-m
 	fi
 }
 
-if [[ "$1" == "toggle_htop_window" ]]; then
+if [[ "$1" == "toggle_sysmon_window" ]]; then
 	toggle_sysmon_window
 fi
 

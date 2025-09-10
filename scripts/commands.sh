@@ -35,9 +35,7 @@ toggle_sysmon_window() {
 }
 
 toggle_lazydocker_window() {
-  if [[ -d .git ]] || git rev-parse --git-dir >/dev/null 2>&1; then
-    toggle_window "lazydocker" "toggle_lazydocker"
-  fi
+  toggle_window "lazydocker" "toggle_lazydocker"
 }
 
 case "$1" in

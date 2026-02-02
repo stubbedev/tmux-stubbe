@@ -4,17 +4,6 @@ get_current_window() {
 	tmux display-message -p '#W'
 }
 
-check_if_window_exists() {
-	local window_name=$1
-	local result=$(tmux list-windows -F "#{window_name}" | grep -i "$window_name")
-
-	if [ -n "$result" ]; then
-		echo 1
-	else
-		echo 0
-	fi
-}
-
 toggle_window_app() {
 	local command="$1"
 	
@@ -31,9 +20,11 @@ toggle_window_app() {
 }
 
 toggle_lazygit() {
-	if [[ ! -d .git ]] && ! git rev-parse --git-dir >/dev/null 2>&1; then
-		clear
-		return
+	if [[ "${TMUX_STUBBE_SKIP_GIT_CHECK:-0}" != "1" ]]; then
+		if [[ ! -d .git ]] && ! git rev-parse --git-dir >/dev/null 2>&1; then
+			clear
+			return
+		fi
 	fi
 	
 	if command -v lazygit &>/dev/null; then
